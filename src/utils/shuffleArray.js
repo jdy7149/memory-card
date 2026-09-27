@@ -4,6 +4,8 @@ function shuffleArray(arr) {
 
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
+
+  return arr;
 }
 
 export default shuffleArray;
