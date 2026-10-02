@@ -13,11 +13,25 @@ function App() {
 
   return (
     <>
-      <header>
-        <div className="header">
-          <div>Memory Card</div>
-          <div>Current Score: {score}</div>
-          <div>Best Score: {bestScore}</div>
+      <header className="header">
+        <div className="header-content">
+          <div className="title-area">
+            <h1>Memory Card</h1>
+            <p>
+              Click each Pokémon only once. Remember which ones you've already
+              clicked!
+            </p>
+          </div>
+          <div className="score-area">
+            <div className="score">
+              <span>Score</span>
+              <strong>{score}</strong>
+            </div>
+            <div className="score">
+              <span>Best Score</span>
+              <strong>{bestScore}</strong>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -27,7 +41,7 @@ function App() {
           updateScore={setScore}
           updateBestScore={updateBestScore}
           resetGame={() => setGameKey((prev) => prev + 1)}
-        ></GameBoard>
+        />
       </main>
     </>
   );
