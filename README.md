@@ -2,7 +2,7 @@
 
 **Project:** Memory Card from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-memory-card)
 
-[🔗 Live Preview]()
+[🔗 Live Preview](https://pokemorycard.netlify.app/)
 
 ## Objective
 
