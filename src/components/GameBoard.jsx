@@ -58,12 +58,12 @@ function GameBoard({ currentScore, updateScore, updateBestScore, resetGame }) {
 
   return (
     <div className="main-grid">
-      {pokemons.map(({ id, name, imgUrl }) => {
+      {pokemons.map(({ id, name, imgUrl }) => (
         <div key={id} className="card" onClick={() => onCardClick(id)}>
           <img src={imgUrl} alt={name} />
           <p>{name}</p>
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
