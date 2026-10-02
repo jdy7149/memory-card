@@ -38,16 +38,34 @@ function GameBoard({ currentScore, updateScore, updateBestScore, resetGame }) {
     };
   }, [round]);
 
+  function onCardClick(id) {
+    if (clickedPokemons.has(id)) {
+      updateBestScore(currentScore);
+      updateScore(0);
+      resetGame();
+      return;
+    }
+
+    updateScore((prev) => prev + 1);
+
+    setClickedPokemons((prev) => {
+      const next = new Set(prev);
+      next.add(id);
+      return next;
+    });
+    setRound((prev) => prev + 1);
+  }
+
   return (
     <div className="main-grid">
       {pokemons.map(({ id, name, imgUrl }) => {
-        <div key={id} className="card">
+        <div key={id} className="card" onClick={() => onCardClick(id)}>
           <img src={imgUrl} alt={name} />
           <p>{name}</p>
-        </div>
+        </div>;
       })}
     </div>
-  )
+  );
 }
 
 export default GameBoard;
