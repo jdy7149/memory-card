@@ -17,9 +17,10 @@ const POKEMON_IDS = [
   81, //Magnemite
 ];
 
-function GameBoard() {
+function GameBoard({ currentScore, updateScore, updateBestScore, resetGame }) {
   const [round, setRound] = useState(1);
   const [pokemons, setPokemons] = useState([]);
+  const [clickedPokemons, setClickedPokemons] = useState(new Set());
 
   useEffect(() => {
     let ignore = false;
@@ -36,6 +37,17 @@ function GameBoard() {
       ignore = true;
     };
   }, [round]);
+
+  return (
+    <div className="main-grid">
+      {pokemons.map(({ id, name, imgUrl }) => {
+        <div key={id} className="card">
+          <img src={imgUrl} alt={name} />
+          <p>{name}</p>
+        </div>
+      })}
+    </div>
+  )
 }
 
 export default GameBoard;
