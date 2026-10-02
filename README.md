@@ -1,16 +1,22 @@
-# React + Vite
+# Memory Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Project:** Memory Card from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-memory-card)
 
-Currently, two official plugins are available:
+[🔗 Live Preview]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Objective
 
-## React Compiler
+Practice using the `useEffect` Hook in React, particularly for fetching and synchronizing Pokémon data when the game round changes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Lessons Learned
 
-## Expanding the ESLint configuration
+* A React state setter can receive a function instead of a value.
+* The function receives the previous state as its argument, which is useful when the new state depends on the previous state.
+* Used this pattern when updating the score and `Set` of clicked Pokémon.
+* Practiced using `key` to reset a component by forcing it to remount.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Credits
+
+Pokémon data and artwork are provided by [PokéAPI](https://pokeapi.co/).
+
+note: CSS was generated with the assistance of AI.
